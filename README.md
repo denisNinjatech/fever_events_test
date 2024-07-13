@@ -48,16 +48,16 @@ Example: If we deploy our application on 2021-02-01, and we request the events f
 
 1. **MySQL Database Setup:**
 
-- Create a database named `fever_events` on MySQL Localhost
+   - Create a database named `fever_events` on MySQL Localhost
 
 2. **Redis Server:**
 
-- Redis server should be up and running on port 6379
-  ( How to install Redis :- [https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/](https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/))
+   - Redis server should be up and running on port 6379
+     ( How to install Redis :- [https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/](https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/))
 
 3. **Update .env File:**
 
-- Update the values in .env file.
+   - Update the values in .env file.
 
 4. **Run command to create virtual environment, create required tables in MySQL database using Makefile: ( Run for first Time only, not needed once environment has been set up )**
 
