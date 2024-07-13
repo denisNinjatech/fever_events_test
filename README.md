@@ -48,29 +48,41 @@ Example: If we deploy our application on 2021-02-01, and we request the events f
 
 1. **MySQL Database Setup:**
 
-- Create a database named `events` on MySQL Localhost
+- Create a database named `fever_events` on MySQL Localhost
 
 2. **Redis Server:**
 
 - Redis server should be up and running on port 6379
   ( How to install Redis :- [https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/](https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/))
 
-3. **Run command to create virtual environment, create required tables in MySQL database using Makefile: ( Run for first Time ever, not needed once environment set up )**
+3. **Run command to create virtual environment, create required tables in MySQL database using Makefile: ( Run for first Time only, not needed once environment has been set up )**
 
    ```bash
    make env-setup
    ```
 
-4. **Run command to start celery for scheduer task using Makefile: ( Every Time we want to run the project in new command line)**
+4. **Run command to create required tables in MySQL database using Makefile: ( Run for first Time only, not needed to run once tables has been created )**
 
    ```bash
-   make start-scheduler
+   make migration
    ```
 
-5. **Run command to start API project using Makefile: ( Every Time we want to run the project in new command line)**
+5. **Run command to start celery worker for executing scheduled task using Makefile: ( Every Time we want to run the project, run in new command line )**
 
    ```bash
-   make start-api
+   make celery-worker
+   ```
+
+6. **Run command to start celery beat for scheduing task using Makefile: ( Every Time we want to run the project, run in new command line )**
+
+   ```bash
+   make celery-beat
+   ```
+
+7. **Run command to start API project using Makefile: ( Every Time we want to run the project, run in new command line)**
+
+   ```bash
+   make api
    ```
 
 #### Usage
