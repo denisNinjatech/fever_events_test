@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+requests
+lxml
+celery
+redis
+mysqlclient
+pymysql
+cryptography
+python-decouple
+pytz
