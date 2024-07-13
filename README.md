@@ -55,31 +55,35 @@ Example: If we deploy our application on 2021-02-01, and we request the events f
 - Redis server should be up and running on port 6379
   ( How to install Redis :- [https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/](https://redis.io/docs/latest/operate/oss_and_stack/install/install-redis/))
 
-3. **Run command to create virtual environment, create required tables in MySQL database using Makefile: ( Run for first Time only, not needed once environment has been set up )**
+3. **Update .env File:**
+
+- Update the values in .env file.
+
+4. **Run command to create virtual environment, create required tables in MySQL database using Makefile: ( Run for first Time only, not needed once environment has been set up )**
 
    ```bash
    make env-setup
    ```
 
-4. **Run command to create required tables in MySQL database using Makefile: ( Run for first Time only, not needed to run once tables has been created )**
+5. **Run command to create required tables in MySQL database using Makefile: ( Run for first Time only, not needed to run once tables has been created )**
 
    ```bash
    make migration
    ```
 
-5. **Run command to start celery worker for executing scheduled task using Makefile: ( Every Time we want to run the project, run in new command line )**
+6. **Run command to start celery worker for executing scheduled task using Makefile: ( Every Time we want to run the project, run in new command line )**
 
    ```bash
    make celery-worker
    ```
 
-6. **Run command to start celery beat for scheduing task using Makefile: ( Every Time we want to run the project, run in new command line )**
+7. **Run command to start celery beat for scheduing task using Makefile: ( Every Time we want to run the project, run in new command line )**
 
    ```bash
    make celery-beat
    ```
 
-7. **Run command to start API project using Makefile: ( Every Time we want to run the project, run in new command line)**
+8. **Run command to start API project using Makefile: ( Every Time we want to run the project, run in new command line)**
 
    ```bash
    make api
